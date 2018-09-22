@@ -25,10 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    registration.cpp \
+    authorization.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    registration.h \
+    authorization.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    registration.ui \
+    authorization.ui
