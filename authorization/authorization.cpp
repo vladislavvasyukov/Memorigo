@@ -15,7 +15,7 @@ Authorization::~Authorization()
 
 void Authorization::on_cancelButton_clicked()
 {
-
+    this->close();
 }
 
 void Authorization::on_authorizationButton_clicked()
