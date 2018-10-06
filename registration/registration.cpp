@@ -15,7 +15,7 @@ Registration::~Registration()
 
 void Registration::on_cancelButton_clicked()
 {
-    this.close();
+    this->close();
 }
 
 void Registration::on_registrationButton_clicked()
