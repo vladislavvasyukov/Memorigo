@@ -1,6 +1,8 @@
 #include "registration.h"
 #include "ui_registration.h"
 #include <QMessageBox>
+#include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlQuery>
 
 Registration::Registration(QWidget *parent) :
     QDialog(parent),
@@ -31,12 +33,24 @@ void Registration::on_registrationButton_clicked()
     failMsg.setInformativeText("Неправильное подтверждение пароля! Попробуйте ещё раз.");
     failMsg.setIcon(QMessageBox::Information);
 
-    bool isOpen = ui->password->text() == ui->repeatPassword->text();
+    bool isTruePassword = ui->password->text() == ui->repeatPassword->text();
 
-    if (isOpen){
-        int res = successMsg.exec();
-        if (res == QMessageBox::Ok){
-            this->close();
+    if (isTruePassword){
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName("C:\\my_projects\\database_memorigo.db");
+        bool isOpen = db.open();
+
+        QSqlQuery query;
+        query.prepare("INSERT INTO users (name, login, password) VALUES (:name, :login, :password)");
+        query.bindValue(":name", ui->name->text());
+        query.bindValue(":login", ui->login->text());
+        query.bindValue(":password", ui->login->text());
+        query.exec();
+        if (isOpen) {
+            int res = successMsg.exec();
+            if (res == QMessageBox::Ok){
+                this->close();
+            }
         }
     } else {
         int res = failMsg.exec();

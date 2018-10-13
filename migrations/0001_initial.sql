@@ -4,10 +4,10 @@ CREATE TABLE `cards` (
     `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     `question` VARCHAR(128) NOT NULL,
     `answer` VARCHAR(128) NOT NULL,
-    `created_date` DATE NOT NULL,
+    `created_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `e_factor` REAL NOT NULL,
-    `last_repetition_date` DATE NULL,
-    `next_repetition_date` DATE NULL
+    `last_repetition_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `next_repetition_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE `decks` (
@@ -18,9 +18,9 @@ CREATE TABLE `decks` (
 CREATE TABLE `users` (
 	`id` integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
 	`name` varchar(128) NOT NULL, 
-	`login` varchar(128) NOT NULL, 
+	`login` varchar(128) NOT NULL UNIQUE, 
 	`password` varchar(128) NOT NULL, 
-	`registration_date` date NOT NULL
+	`registration_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 ALTER TABLE `decks` RENAME TO `decks__old`;
@@ -47,10 +47,10 @@ CREATE TABLE `cards` (
 	`id` integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
 	`question` varchar(128) NOT NULL, 
 	`answer` varchar(128) NOT NULL, 
-	`created_date` date NOT NULL, 
+	`created_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
 	`e_factor` real NOT NULL, 
-	`last_repetition_date` date NULL, 
-	`next_repetition_date` date NULL, 
+	`last_repetition_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+	`next_repetition_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
 	`deck_id` integer NOT NULL REFERENCES `decks` (`id`)
 );
 
