@@ -27,14 +27,17 @@ SOURCES += \
         main.cpp \
         enterwindow\enterwindow.cpp \
         registration\registration.cpp \
-        authorization\authorization.cpp
+        authorization\authorization.cpp \
+    education/education.cpp
 
 HEADERS += \
         enterwindow\enterwindow.h \
         registration\registration.h \
-        authorization\authorization.h
+        authorization\authorization.h \
+    education/education.h
 
 FORMS += \
         enterwindow\enterwindow.ui \
         registration\registration.ui \
-        authorization\authorization.ui
+        authorization\authorization.ui \
+    education/education.ui
