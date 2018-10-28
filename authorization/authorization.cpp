@@ -26,12 +26,10 @@ void Authorization::on_cancelButton_clicked()
 void Authorization::on_authorizationButton_clicked()
 {
     QMessageBox successMsg;
-//    successMsg.setText("Information");
-    successMsg.setInformativeText("Здравствуйте, username!");
     successMsg.setIcon(QMessageBox::Information);
 
     QMessageBox failMsg;
-    failMsg.setText("Error");
+    failMsg.setText("Ошибка!");
     failMsg.setInformativeText("Неверный логин или пароль! Попробуйте ещё раз.");
     failMsg.setIcon(QMessageBox::Information);
 
@@ -44,12 +42,16 @@ void Authorization::on_authorizationButton_clicked()
     query.bindValue(":login", ui->login->text());
     query.bindValue(":password", ui->password->text());
     query.exec();
-    qDebug() << query.value(0);
-    QString name = query.value(0).toString();
-    QString login = query.value(1).toString();
-    QString password = query.value(2).toString();
-    successMsg.setText(login);
-    if (true) {
+
+    QString name = "";
+//    QString login = query.value(1).toString();
+//    QString password = query.value(2).toString();
+    while(query.next()) {
+        name = query.value(0).toString();
+    }
+
+    if (isOpen && name.length() > 0) {
+        successMsg.setText("Приветствую Вас, " + name + "!");
         int res = successMsg.exec();
         if (res == QMessageBox::Ok){
             this->close();
