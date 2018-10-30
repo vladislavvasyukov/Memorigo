@@ -14,6 +14,10 @@ class Education : public QDialog
 public:
     explicit Education(QWidget *parent = 0);
     ~Education();
+    QString user_id;
+
+private slots:
+    void on_add_card_button_clicked();
 
 private:
     Ui::Education *ui;

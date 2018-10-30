@@ -1,6 +1,6 @@
 #include "registration.h"
 #include "ui_registration.h"
-#include "education/education.h"
+#include "authorization/authorization.h"
 #include <QMessageBox>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>
@@ -51,9 +51,9 @@ void Registration::on_registrationButton_clicked()
             int res = successMsg.exec();
             if (res == QMessageBox::Ok){
                 this->close();
-                Education window;
-                window.setModal(true);
-                window.exec();
+                Authorization authorization;
+                authorization.setModal(true);
+                authorization.exec();
             }
         }
     } else {

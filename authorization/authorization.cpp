@@ -38,16 +38,17 @@ void Authorization::on_authorizationButton_clicked()
     bool isOpen = db.open();
 
     QSqlQuery query;
-    query.prepare("SELECT name, login, password FROM users WHERE login=:login AND password=:password");
+    query.prepare("SELECT id, name FROM users WHERE login=:login AND password=:password");
     query.bindValue(":login", ui->login->text());
     query.bindValue(":password", ui->password->text());
     query.exec();
 
     QString name = "";
-//    QString login = query.value(1).toString();
-//    QString password = query.value(2).toString();
+    QString user_id = "";
+
     while(query.next()) {
-        name = query.value(0).toString();
+        user_id = query.value(0).toString();
+        name = query.value(1).toString();
     }
 
     if (isOpen && name.length() > 0) {
@@ -56,6 +57,7 @@ void Authorization::on_authorizationButton_clicked()
         if (res == QMessageBox::Ok){
             this->close();
             Education window;
+            window.user_id = user_id;
             window.setModal(true);
             window.exec();
         }
