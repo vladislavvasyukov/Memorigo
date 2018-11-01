@@ -29,18 +29,21 @@ SOURCES += \
         registration\registration.cpp \
         authorization\authorization.cpp \
     education/education.cpp \
-    add_card/add_card.cpp
+    add_card/add_card.cpp \
+    add_category/add_category.cpp
 
 HEADERS += \
         enterwindow\enterwindow.h \
         registration\registration.h \
         authorization\authorization.h \
     education/education.h \
-    add_card/add_card.h
+    add_card/add_card.h \
+    add_category/add_category.h
 
 FORMS += \
         enterwindow\enterwindow.ui \
         registration\registration.ui \
         authorization\authorization.ui \
     education/education.ui \
-    add_card/add_card.ui
+    add_card/add_card.ui \
+    add_category/add_category.ui

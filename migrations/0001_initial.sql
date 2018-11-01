@@ -5,7 +5,7 @@ CREATE TABLE `cards` (
     `question` VARCHAR(128) NOT NULL,
     `answer` VARCHAR(128) NOT NULL,
     `created_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `e_factor` REAL NOT NULL,
+    `e_factor` REAL NOT NULL DEFAULT 2.5,
     `last_repetition_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `next_repetition_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -48,7 +48,7 @@ CREATE TABLE `cards` (
 	`question` varchar(128) NOT NULL, 
 	`answer` varchar(128) NOT NULL, 
 	`created_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
-	`e_factor` real NOT NULL, 
+	`e_factor` real NOT NULL DEFAULT 2.5, 
 	`last_repetition_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
 	`next_repetition_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
 	`deck_id` integer NOT NULL REFERENCES `decks` (`id`)

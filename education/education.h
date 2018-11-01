@@ -19,6 +19,8 @@ public:
 private slots:
     void on_add_card_button_clicked();
 
+    void on_add_category_button_clicked();
+
 private:
     Ui::Education *ui;
 };

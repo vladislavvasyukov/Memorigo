@@ -14,6 +14,7 @@ class AddCard : public QDialog
 public:
     explicit AddCard(QWidget *parent = 0);
     ~AddCard();
+    QString user_id;
 
 private slots:
     void on_cancel_button_clicked();
