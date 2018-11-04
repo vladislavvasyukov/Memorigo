@@ -2,7 +2,6 @@
 #include "ui_add_category.h"
 #include "QDebug"
 #include <QMessageBox>
-#include <QSqlDatabase>
 #include <QSqlQuery>
 
 AddCategory::AddCategory(QWidget *parent) :
@@ -21,7 +20,7 @@ void AddCategory::on_create_category_button_clicked()
 {
     QMessageBox failMsg;
     failMsg.setText("Ошибка!");
-    failMsg.setInformativeText("Неверный логин или пароль! Попробуйте ещё раз.");
+    failMsg.setInformativeText("Произошла ошибка!");
     failMsg.setIcon(QMessageBox::Information);
 
     // убрать

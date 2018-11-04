@@ -30,7 +30,8 @@ SOURCES += \
         authorization\authorization.cpp \
     education/education.cpp \
     add_card/add_card.cpp \
-    add_category/add_category.cpp
+    add_category/add_category.cpp \
+    base_combo_model.cpp
 
 HEADERS += \
         enterwindow\enterwindow.h \
@@ -38,7 +39,8 @@ HEADERS += \
         authorization\authorization.h \
     education/education.h \
     add_card/add_card.h \
-    add_category/add_category.h
+    add_category/add_category.h \
+    base_combo_model.h
 
 FORMS += \
         enterwindow\enterwindow.ui \
