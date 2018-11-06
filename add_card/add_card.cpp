@@ -1,13 +1,16 @@
 #include "add_card.h"
 #include "ui_add_card.h"
+#include "base_combo_model.h"
 #include <QMessageBox>
 #include <QSqlQuery>
+#include <QDebug>
 
 AddCard::AddCard(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddCard)
 {
     ui->setupUi(this);
+    ui->category->setModel( new BaseComboModel( "title", "decks WHERE user_id=2", this ) );
 }
 
 AddCard::~AddCard()
@@ -31,11 +34,13 @@ void AddCard::on_add_card_button_clicked()
     bool isOpen = 1;
 
     QSqlQuery query;
-//    query.prepare("INSERT INTO decks (title, user_id)"
-//             "VALUES (:title, :user_id)");
-//    query.bindValue(":title", ui->deck_title->text());
-//    query.bindValue(":user_id", this->user_id);
-//    query.exec();
+//    Здесь нужна проверка. Если category_id = 0, то либо вывести предупреждение, либо создать колоду "Новая колода"
+    query.prepare("INSERT INTO cards (question, answer, deck_id)"
+             "VALUES (:question, :answer, :deck_id)");
+    query.bindValue(":question", ui->question->text());
+    query.bindValue(":answer", ui->answer->text());
+    query.bindValue(":deck_id", ui->category->itemData( ui->category->currentIndex(), Qt::UserRole ));
+    query.exec();
 
     // Здесь должна быть проверка, что запрос к базе выполнился успешно.
     if (isOpen){
