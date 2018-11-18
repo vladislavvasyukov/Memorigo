@@ -25,9 +25,6 @@ void Authorization::on_cancelButton_clicked()
 
 void Authorization::on_authorizationButton_clicked()
 {
-    QMessageBox successMsg;
-    successMsg.setIcon(QMessageBox::Information);
-
     QMessageBox failMsg;
     failMsg.setText("Ошибка!");
     failMsg.setInformativeText("Неверный логин или пароль! Попробуйте ещё раз.");
@@ -52,15 +49,11 @@ void Authorization::on_authorizationButton_clicked()
     }
 
     if (isOpen && name.length() > 0) {
-        successMsg.setText("Приветствую Вас, " + name + "!");
-        int res = successMsg.exec();
-        if (res == QMessageBox::Ok){
-            this->close();
-            Education window;
-            window.user_id = user_id;
-            window.setModal(true);
-            window.exec();
-        }
+        this->close();
+        Education window;
+        window.user_id = user_id;
+        window.setModal(true);
+        window.exec();
     } else {
         int res = failMsg.exec();
     }
