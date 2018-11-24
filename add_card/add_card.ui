@@ -16,11 +16,19 @@
   <widget class="QPushButton" name="add_card_button">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>50</x>
      <y>260</y>
-     <width>75</width>
-     <height>23</height>
+     <width>120</width>
+     <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+user-select: none;
+background-color: #3175b0;
+fon-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Добавить</string>
@@ -29,11 +37,19 @@
   <widget class="QPushButton" name="cancel_button">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>230</x>
      <y>260</y>
-     <width>75</width>
-     <height>23</height>
+     <width>120</width>
+     <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+user-select: none;
+background-color: #3175b0;
+fon-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Отмена</string>
@@ -43,7 +59,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>70</y>
+     <y>90</y>
      <width>47</width>
      <height>13</height>
     </rect>
@@ -56,7 +72,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>160</y>
+     <y>180</y>
      <width>47</width>
      <height>13</height>
     </rect>
@@ -79,7 +95,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>30</y>
+     <y>40</y>
      <width>47</width>
      <height>13</height>
     </rect>
@@ -91,21 +107,38 @@
   <widget class="QLineEdit" name="answer">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>200</y>
-     <width>341</width>
-     <height>20</height>
+     <width>340</width>
+     <height>30</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 14px;
+padding: 6px 0 4px 10px;
+border: 1px solid #cecece;
+background: #fff;
+border-radius: 8px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="question">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>100</y>
-     <width>341</width>
-     <height>20</height>
+     <y>110</y>
+     <width>340</width>
+     <height>30</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 14px;
+padding: 6px 0 4px 10px;
+border: 1px solid #cecece;
+background: #fff;
+border-radius: 8px;</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

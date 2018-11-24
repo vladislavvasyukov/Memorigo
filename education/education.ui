@@ -18,9 +18,17 @@
     <rect>
      <x>60</x>
      <y>50</y>
-     <width>111</width>
-     <height>23</height>
+     <width>120</width>
+     <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+user-select: none;
+background-color: #3175b0;
+fon-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Добавить карточку</string>
@@ -67,9 +75,17 @@
     <rect>
      <x>200</x>
      <y>50</y>
-     <width>111</width>
-     <height>23</height>
+     <width>120</width>
+     <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+user-select: none;
+background-color: #3175b0;
+fon-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Создать колоду</string>
@@ -79,8 +95,8 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>100</y>
-     <width>251</width>
+     <y>80</y>
+     <width>261</width>
      <height>192</height>
     </rect>
    </property>

@@ -17,7 +17,6 @@ Education::Education(QWidget *parent) :
 
     QSqlQuery query;
     query.prepare("SELECT title FROM decks WHERE user_id=2");
-//    query.bindValue(":user_id", this->user_id);
     query.exec();
 
     QString title = "";

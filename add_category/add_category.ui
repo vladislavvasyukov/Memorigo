@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>110</height>
+    <height>132</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,11 +16,19 @@
   <widget class="QPushButton" name="create_category_button">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>70</y>
-     <width>75</width>
-     <height>23</height>
+     <x>60</x>
+     <y>90</y>
+     <width>120</width>
+     <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+user-select: none;
+background-color: #3175b0;
+fon-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Ок</string>
@@ -29,11 +37,19 @@
   <widget class="QPushButton" name="cancel_button">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>70</y>
-     <width>75</width>
-     <height>23</height>
+     <x>220</x>
+     <y>90</y>
+     <width>120</width>
+     <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;
+text-decoration: none; 
+user-select: none;
+background-color: #3175b0;
+fon-size: 14px;
+border-radius: 5px;</string>
    </property>
    <property name="text">
     <string>Отмена</string>
@@ -44,9 +60,16 @@
     <rect>
      <x>10</x>
      <y>40</y>
-     <width>381</width>
-     <height>20</height>
+     <width>380</width>
+     <height>30</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 14px;
+padding: 6px 0 4px 10px;
+border: 1px solid #cecece;
+background: #fff;
+border-radius: 8px;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">

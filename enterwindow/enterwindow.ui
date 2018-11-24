@@ -17,11 +17,19 @@
    <widget class="QPushButton" name="registrationButon">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>30</y>
-      <width>101</width>
-      <height>23</height>
+      <width>120</width>
+      <height>25</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+text-decoration: none; 
+user-select: none;
+background-color: #3175b0;
+fon-size: 14px;
+border-radius: 5px;</string>
     </property>
     <property name="text">
      <string>Регистрация</string>
@@ -30,11 +38,19 @@
    <widget class="QPushButton" name="authorizationButton">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>30</y>
-      <width>101</width>
-      <height>23</height>
+      <width>120</width>
+      <height>25</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;
+text-decoration: none; 
+user-select: none;
+background-color: #3175b0;
+fon-size: 14px;
+border-radius: 5px;</string>
     </property>
     <property name="text">
      <string>Вход</string>
