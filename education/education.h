@@ -17,6 +17,8 @@ public:
     QString user_id;
 
 private slots:
+    void setupDecksList();
+
     void on_add_card_button_clicked();
 
     void on_add_category_button_clicked();
