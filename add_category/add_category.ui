@@ -25,9 +25,8 @@
    <property name="styleSheet">
     <string notr="true">color: #fff;
 text-decoration: none; 
-user-select: none;
 background-color: #3175b0;
-fon-size: 14px;
+font-size: 14px;
 border-radius: 5px;</string>
    </property>
    <property name="text">
@@ -46,9 +45,8 @@ border-radius: 5px;</string>
    <property name="styleSheet">
     <string notr="true">color: #fff;
 text-decoration: none; 
-user-select: none;
 background-color: #3175b0;
-fon-size: 14px;
+font-size: 14px;
 border-radius: 5px;</string>
    </property>
    <property name="text">
@@ -77,9 +75,13 @@ border-radius: 8px;</string>
     <rect>
      <x>10</x>
      <y>20</y>
-     <width>131</width>
+     <width>151</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>Названиие для колоды:</string>

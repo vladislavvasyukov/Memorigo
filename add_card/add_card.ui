@@ -25,9 +25,8 @@
    <property name="styleSheet">
     <string notr="true">color: #fff;
 text-decoration: none; 
-user-select: none;
 background-color: #3175b0;
-fon-size: 14px;
+font-size: 14px;
 border-radius: 5px;</string>
    </property>
    <property name="text">
@@ -46,9 +45,8 @@ border-radius: 5px;</string>
    <property name="styleSheet">
     <string notr="true">color: #fff;
 text-decoration: none; 
-user-select: none;
 background-color: #3175b0;
-fon-size: 14px;
+font-size: 14px;
 border-radius: 5px;</string>
    </property>
    <property name="text">
@@ -64,6 +62,10 @@ border-radius: 5px;</string>
      <height>13</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12px;
+font-weight: 900;</string>
+   </property>
    <property name="text">
     <string>Вопрос</string>
    </property>
@@ -76,6 +78,10 @@ border-radius: 5px;</string>
      <width>47</width>
      <height>13</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>Ответ</string>
@@ -99,6 +105,10 @@ border-radius: 5px;</string>
      <width>47</width>
      <height>13</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>Колода</string>

@@ -18,9 +18,13 @@
     <rect>
      <x>140</x>
      <y>20</y>
-     <width>91</width>
-     <height>16</height>
+     <width>111</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 14px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>&lt;h3&gt;Регистрация&lt;/h3&gt;</string>
@@ -29,18 +33,17 @@
   <widget class="QPushButton" name="registrationButton">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>29</x>
      <y>230</y>
-     <width>120</width>
+     <width>140</width>
      <height>25</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: #fff;
 text-decoration: none; 
-user-select: none;
 background-color: #3175b0;
-fon-size: 14px;
+font-size: 14px;
 border-radius: 5px;</string>
    </property>
    <property name="text">
@@ -59,9 +62,8 @@ border-radius: 5px;</string>
    <property name="styleSheet">
     <string notr="true">color: #fff;
 text-decoration: none; 
-user-select: none;
 background-color: #3175b0;
-fon-size: 14px;
+font-size: 14px;
 border-radius: 5px;</string>
    </property>
    <property name="text">
@@ -140,10 +142,14 @@ border-radius: 8px;</string>
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>60</y>
+     <y>70</y>
      <width>47</width>
      <height>13</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>Имя</string>
@@ -153,10 +159,14 @@ border-radius: 8px;</string>
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>100</y>
+     <y>110</y>
      <width>47</width>
      <height>13</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>Логин</string>
@@ -165,11 +175,15 @@ border-radius: 8px;</string>
   <widget class="QLabel" name="passwordLabel">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>140</y>
-     <width>101</width>
+     <width>131</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>Придумайте пароль</string>
@@ -178,11 +192,15 @@ border-radius: 8px;</string>
   <widget class="QLabel" name="repeatPasswordLabel">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>30</x>
      <y>180</y>
-     <width>101</width>
+     <width>121</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 12px;
+font-weight: 900;</string>
    </property>
    <property name="text">
     <string>Повторите пароль</string>

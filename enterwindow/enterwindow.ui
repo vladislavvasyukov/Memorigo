@@ -26,9 +26,8 @@
     <property name="styleSheet">
      <string notr="true">color: #fff;
 text-decoration: none; 
-user-select: none;
 background-color: #3175b0;
-fon-size: 14px;
+font-size: 14px;
 border-radius: 5px;</string>
     </property>
     <property name="text">
@@ -47,9 +46,8 @@ border-radius: 5px;</string>
     <property name="styleSheet">
      <string notr="true">color: #fff;
 text-decoration: none; 
-user-select: none;
 background-color: #3175b0;
-fon-size: 14px;
+font-size: 14px;
 border-radius: 5px;</string>
     </property>
     <property name="text">

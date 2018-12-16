@@ -25,6 +25,8 @@ private slots:
 
     void on_decksList_clicked(const QModelIndex &index);
 
+    void on_all_categories_clicked();
+
 private:
     Ui::Education *ui;
 };

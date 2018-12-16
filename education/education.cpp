@@ -84,7 +84,7 @@ void Education::on_decksList_clicked(const QModelIndex &index)
         title += query.value(2).toString();
         title += query.value(3).toString();
     }
-    qDebug() << ui->verticalLayout->count();
+
     while(ui->verticalLayout->count())
     {
         QLayoutItem * item = ui->verticalLayout->itemAt(0);
@@ -94,14 +94,26 @@ void Education::on_decksList_clicked(const QModelIndex &index)
         delete item->widget();
         ui->verticalLayout->update();
     }
+
+    ui->verticalLayoutWidget->deleteLater();
     ui->shadow->setText(deck);
-    ui->temp_label->setText("Поздравляем! Вы завершили эту колоду на текущий момент!");
-//    QVBoxLayout *layout = new QVBoxLayout(this);
-//    QLabel *lbl = new QLabel("Поздравляем! Вы завершили эту колоду на текущий момент!" , this);
-//    layout->addWidget(lbl);
+    QLabel *lbl = new QLabel("Поздравляем! Вы завершили эту колоду на текущий момент!");
+    ui->verticalLayout->addWidget(lbl);
+    ui->verticalLayout->update();
+}
 
-
-//    QPushButton *but = new QPushButton(this);
-//    but->setText(QString('QUIT'));
-//    ui->verticalLayout->addWidget(but);
+void Education::on_all_categories_clicked()
+{
+    while(ui->verticalLayout->count())
+    {
+        QLayoutItem * item = ui->verticalLayout->itemAt(0);
+        ui->verticalLayout->removeItem(item);
+        ui->verticalLayout->removeWidget(item->widget());
+        delete item;
+        delete item->widget();
+        ui->verticalLayout->update();
+    }
+	
+    ui->verticalLayoutWidget->deleteLater();
+    this->setupDecksList();
 }
